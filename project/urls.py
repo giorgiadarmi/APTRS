@@ -10,6 +10,7 @@ from django.conf.urls import include
 urlpatterns = [
     path('', views.project, name='index'),
     path('project/add', views.projectadd, name='projectadd'),
+    path('search/', views.vuln_search, name='vuln-search'),
     path('project/delete/<str:pk>/', views.projectdelete, name='projectdelete'),
     path('project/<str:pk>/', views.projectView, name='projectView'),
     path('project/edit/<str:pk>/', views.projectedit, name='projectedit'),

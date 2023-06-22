@@ -27,6 +27,22 @@ def project(request):
     return render(request, "Project/project.html",{'project': project})
 
 @login_required
+def vuln_search(request):
+    search_query = request.GET.get('search')
+    vulnerability = []
+
+    if search_query:
+        vulnerability = Vulnerability.objects.filter(vulnerabilityname__icontains=search_query)
+
+    context = {
+        'vulnerability': vulnerability,
+        'search_query': search_query
+    }
+
+    return render(request, 'Project/vuln_search.html', context)
+
+
+@login_required
 def projectadd(request):
     if request.method == 'GET':
 

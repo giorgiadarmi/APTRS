@@ -27,8 +27,15 @@
   <div>
     Project
   </div>
+
   <a role="button" class="btn btn-primary" href="/project/add">Add New</a>
 </h4>
+<div><br>
+<form method="get" action="{% url 'vuln-search' %}" class="form-inline my-2 my-lg-0">
+    <input class="form-control mr-sm-2" type="text" name="search" id="search-input" placeholder="Search vulnerability here" aria-label="Search">
+    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+</form><br>
+</div>
 									
                                     <div class="card-body p-0">
                                         <div class="table-responsive">
