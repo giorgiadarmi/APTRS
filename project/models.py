@@ -1,6 +1,7 @@
 from django.db import models
 from customers.models import Company, Customer
 from ckeditor_uploader.fields import RichTextUploadingField
+from ckeditor.fields import RichTextField
 from django.utils import timezone
 
 # Create your models here.
