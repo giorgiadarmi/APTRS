@@ -48,8 +48,8 @@ function updateScores()
       parentNode( text("#baseMetricScore", result.baseMetricScore ), '.scoreRating').className = 'scoreRating '+result.baseSeverity.toLowerCase();
       text("#baseSeverity", "(" + result.baseSeverity + ")" );
 
-      //parentNode( text("#temporalMetricScore", result.temporalMetricScore ), '.scoreRating').className = 'scoreRating '+result.temporalSeverity.toLowerCase();
-      //text("#temporalSeverity", "(" + result.temporalSeverity + ")" );
+      parentNode( text("#temporalMetricScore", result.temporalMetricScore ), '.scoreRating').className = 'scoreRating '+result.temporalSeverity.toLowerCase();
+      text("#temporalSeverity", "(" + result.temporalSeverity + ")" );
 
       //parentNode( text("#environmentalMetricScore", result.environmentalMetricScore ), '.scoreRating').className = 'scoreRating '+result.environmentalSeverity.toLowerCase();
       //text("#environmentalSeverity", "(" + result.environmentalSeverity + ")" );

@@ -365,6 +365,9 @@ function editvulnerabilitydb(oFormElement){
         var c = outputaray[6].split(":")[1]
         var i = outputaray[7].split(":")[1]
         var a = outputaray[8].split(":")[1]
+        var e = outputaray[9].split(":")[1]
+        var rl = outputaray[10].split(":")[1]
+        var rc = outputaray[11].split(":")[1]
 
 
         
@@ -376,6 +379,9 @@ function editvulnerabilitydb(oFormElement){
         $("input[name=C][value=" + c + "]").attr('checked', 'checked');
         $("input[name=I][value=" + i + "]").attr('checked', 'checked');
         $("input[name=A][value=" + a + "]").attr('checked', 'checked');
+        $("input[name=E][value=" + e + "]").attr('checked', 'checked');
+        $("input[name=RL][value=" + rl + "]").attr('checked', 'checked');
+        $("input[name=RC][value=" + rc + "]").attr('checked', 'checked');
         updateScores()
 
 
@@ -395,6 +401,9 @@ function editvulnerabilitydb(oFormElement){
       var c = outputaray[6].split(":")[1]
       var i = outputaray[7].split(":")[1]
       var a = outputaray[8].split(":")[1]
+      var e = outputaray[9].split(":")[1]
+      var rl = outputaray[10].split(":")[1]
+      var rc = outputaray[11].split(":")[1]
 
 
       
@@ -406,6 +415,9 @@ function editvulnerabilitydb(oFormElement){
       $("input[name=C][value=" + c + "]").attr('checked', 'checked');
       $("input[name=I][value=" + i + "]").attr('checked', 'checked');
       $("input[name=A][value=" + a + "]").attr('checked', 'checked');
+      $("input[name=E][value=" + e + "]").attr('checked', 'checked');
+      $("input[name=RL][value=" + rl + "]").attr('checked', 'checked');
+      $("input[name=RC][value=" + rc + "]").attr('checked', 'checked');
       updateScores()
 
 
