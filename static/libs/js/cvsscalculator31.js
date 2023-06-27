@@ -51,8 +51,8 @@ function updateScores()
       parentNode( text("#temporalMetricScore", result.temporalMetricScore ), '.scoreRating').className = 'scoreRating '+result.temporalSeverity.toLowerCase();
       text("#temporalSeverity", "(" + result.temporalSeverity + ")" );
 
-      //parentNode( text("#environmentalMetricScore", result.environmentalMetricScore ), '.scoreRating').className = 'scoreRating '+result.environmentalSeverity.toLowerCase();
-      //text("#environmentalSeverity", "(" + result.environmentalSeverity + ")" );
+      parentNode( text("#environmentalMetricScore", result.environmentalMetricScore ), '.scoreRating').className = 'scoreRating '+result.environmentalSeverity.toLowerCase();
+      text("#environmentalSeverity", "(" + result.environmentalSeverity + ")" );
 
       show( inputValue("#vectorString", result.vectorString ) );
 

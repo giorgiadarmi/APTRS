@@ -2,8 +2,8 @@ function editvulnerability(){
 var csrfmiddlewaretoken = document.getElementsByName('csrfmiddlewaretoken')[0].value;
 var project = document.getElementsByName('project')[0].value;
 var vulnerabilityname = encodeURI(document.getElementById("editable-select").value);
-var vulnerabilityseverity = document.getElementById('baseSeverity').innerHTML.replace(/[()]/g, ''); 
-var cvssscore = document.getElementById('baseMetricScore').innerHTML;
+var vulnerabilityseverity = document.getElementById('environmentalSeverity').innerHTML.replace(/[()]/g, ''); 
+var cvssscore = document.getElementById('environmentalMetricScore').innerHTML;
 var cvssvector = document.getElementById('vectorString').value;
 var status = document.getElementById('input-select').value;
 var vulnerabilitydescription = encodeURI(CKEDITOR.instances['id_vulnerabilitydescription'].getData());
@@ -59,8 +59,8 @@ xhr.send('csrfmiddlewaretoken='+csrfmiddlewaretoken+'&project='+project+'&vulner
 
  function addnewvulnerability(oFormElement) {
     var csrfmiddlewaretoken = document.getElementsByName('csrfmiddlewaretoken')[0].value;
-	var vulnerabilityseverity = document.getElementById('baseSeverity').innerHTML.replace(/[()]/g, ''); 
-var cvssscore = document.getElementById('baseMetricScore').innerHTML;
+	var vulnerabilityseverity = document.getElementById('environmentalSeverity').innerHTML.replace(/[()]/g, ''); 
+var cvssscore = document.getElementById('environmentalMetricScore').innerHTML;
 var cvssvector = document.getElementById('vectorString').value;
 var vulnerabilityname = encodeURI(document.getElementById("editable-select").value);
 //var vulnerabilityname = encodeURI(document.getElementById('select2-siteID-container').innerHTML)
@@ -157,8 +157,8 @@ else {
 function addnewvulnerabilitydb(oFormElement){
   
   var csrfmiddlewaretoken = document.getElementsByName('csrfmiddlewaretoken')[0].value;
-	var vulnerabilityseverity = document.getElementById('baseSeverity').innerHTML.replace(/[()]/g, ''); 
-  var cvssscore = document.getElementById('baseMetricScore').innerHTML;
+	var vulnerabilityseverity = document.getElementById('environmentalSeverity').innerHTML.replace(/[()]/g, ''); 
+  var cvssscore = document.getElementById('environmentalMetricScore').innerHTML;
   var cvssvector = document.getElementById('vectorString').value;
   var vulnerabilityname = encodeURI(document.getElementById('id_vulnerabilityname').value);
   var vulnerabilitydescription = encodeURI(CKEDITOR.instances['id_vulnerabilitydescription'].getData());
@@ -206,8 +206,8 @@ function addnewvulnerabilitydb(oFormElement){
 
 function editvulnerabilitydb(oFormElement){
   var csrfmiddlewaretoken = document.getElementsByName('csrfmiddlewaretoken')[0].value;
-	var vulnerabilityseverity = document.getElementById('baseSeverity').innerHTML.replace(/[()]/g, ''); 
-  var cvssscore = document.getElementById('baseMetricScore').innerHTML;
+	var vulnerabilityseverity = document.getElementById('environmentalSeverity').innerHTML.replace(/[()]/g, ''); 
+  var cvssscore = document.getElementById('environmentalMetricScore').innerHTML;
   var cvssvector = document.getElementById('vectorString').value;
   var vulnerabilityname = encodeURI(document.getElementById('id_vulnerabilityname').value);
   var vulnerabilitydescription = encodeURI(CKEDITOR.instances['id_vulnerabilitydescription'].getData());
@@ -368,7 +368,9 @@ function editvulnerabilitydb(oFormElement){
         var e = outputaray[9].split(":")[1]
         var rl = outputaray[10].split(":")[1]
         var rc = outputaray[11].split(":")[1]
-
+        var cr = outputaray[12].split(":")[1]
+        var ir = outputaray[13].split(":")[1]
+        var ar = outputaray[14].split(":")[1]
 
         
         $("input[name=AV][value=" + av + "]").attr('checked', 'checked');
@@ -382,6 +384,9 @@ function editvulnerabilitydb(oFormElement){
         $("input[name=E][value=" + e + "]").attr('checked', 'checked');
         $("input[name=RL][value=" + rl + "]").attr('checked', 'checked');
         $("input[name=RC][value=" + rc + "]").attr('checked', 'checked');
+        $("input[name=CR][value=" + cr + "]").attr('checked', 'checked');
+        $("input[name=IR][value=" + ir + "]").attr('checked', 'checked');
+        $("input[name=AR][value=" + ar + "]").attr('checked', 'checked');
         updateScores()
 
 
@@ -404,6 +409,9 @@ function editvulnerabilitydb(oFormElement){
       var e = outputaray[9].split(":")[1]
       var rl = outputaray[10].split(":")[1]
       var rc = outputaray[11].split(":")[1]
+      var cr = outputaray[12].split(":")[1]
+      var ir = outputaray[13].split(":")[1]
+      var ar = outputaray[14].split(":")[1]
 
 
       
@@ -418,6 +426,9 @@ function editvulnerabilitydb(oFormElement){
       $("input[name=E][value=" + e + "]").attr('checked', 'checked');
       $("input[name=RL][value=" + rl + "]").attr('checked', 'checked');
       $("input[name=RC][value=" + rc + "]").attr('checked', 'checked');
+      $("input[name=CR][value=" + cr + "]").attr('checked', 'checked');
+      $("input[name=IR][value=" + ir + "]").attr('checked', 'checked');
+      $("input[name=AR][value=" + ar + "]").attr('checked', 'checked');
       updateScores()
 
 
